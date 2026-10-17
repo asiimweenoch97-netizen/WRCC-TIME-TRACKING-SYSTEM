@@ -1,0 +1,8 @@
+{
+  "name": "WRCC-Media Time Tracking System",
+  "description": "A complete attendance tracking and timesheet system with digital signatures for World Restoration Center Church Media Department.",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}

@@ -1,0 +1,82 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@500;700&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Calibri", "Candara", "Segoe UI", "Optima", "Arial", "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Calibri", "Candara", "Segoe UI", "Optima", "Arial", "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;
+}
+
+body {
+  background-color: #f8fafc;
+  color: #020617;
+  font-weight: 500;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+}
+
+/* Elevate contrast globally across muted text, labels and subtext */
+.text-slate-400 {
+  color: #334155 !important; /* slate-700 for ultra crisp contrast */
+}
+
+.text-slate-500 {
+  color: #1e293b !important; /* slate-800 for high visibility */
+}
+
+.text-slate-600 {
+  color: #0f172a !important; /* slate-900 */
+}
+
+.text-gray-400 {
+  color: #374151 !important;
+}
+
+.text-gray-500 {
+  color: #1f2937 !important;
+}
+
+/* Enhanced contrast for form placeholders and controls */
+::placeholder {
+  color: #475569 !important;
+  opacity: 1 !important;
+}
+
+label {
+  color: #020617 !important;
+  font-weight: 700 !important;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: #020617;
+  font-weight: 800;
+  letter-spacing: -0.01em;
+}
+
+/* Suppress Vite development error overlays and bottom-left connection badges */
+vite-error-overlay,
+#vite-plugin-error-overlay,
+[id^="vite-plugin-error-overlay"],
+iframe[src*="vite"] {
+  display: none !important;
+  visibility: hidden !important;
+  opacity: 0 !important;
+  pointer-events: none !important;
+}
+
+/* Standardized positioning for all select dropdown arrows across the application */
+select {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='%23334155' stroke-width='2.5' stroke-linecap='round' stroke-linejoin='round'%3e%3cpolyline points='6 9 12 15 18 9'%3e%3c/polyline%3e%3c/svg%3e");
+  background-repeat: no-repeat;
+  background-position: right 0.85rem center;
+  background-size: 1rem 1rem;
+}
+
+/* When wrapped with an explicit Lucide ChevronDown icon container, suppress background-image */
+.relative > select {
+  background-image: none !important;
+}
